@@ -11,7 +11,15 @@
       "name": "translate",
       "title": "Translate word",
       "description": "",
-      "mode": "view"
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "text",
+          "placeholder": "Text",
+          "type": "text",
+          "required": true
+        }
+      ]
     },
     {
       "name": "google-search",
