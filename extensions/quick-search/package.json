@@ -3,51 +3,26 @@
   "name": "quick-search",
   "title": "Quick Search",
   "icon": "icon.png",
-  "description": "Quickly search selected text or clipboard text via Google or Github or DeepL etc.",
+  "description": "Perform various actions on the selected text or clipboard text. Translate, paraphrase, or look up a definition etc.",
   "author": "iwfan",
   "license": "MIT",
+  "permissions": [
+    "clipboard-read",
+    "accessibility"
+  ],
   "commands": [
     {
-      "name": "translate",
-      "title": "Translate word",
-      "description": "",
+      "name": "index",
+      "title": "Quick Search",
+      "description": "Perform various actions on the selected text or clipboard text. Translate, paraphrase, or look up a definition etc.",
       "mode": "view",
       "arguments": [
         {
           "name": "text",
           "placeholder": "Text",
-          "type": "text",
-          "required": true
+          "type": "text"
         }
       ]
-    },
-    {
-      "name": "google-search",
-      "title": "Google Search",
-      "subtitle": "Clipboard Searches",
-      "description": "Search selected text or clipboard text via Google.",
-      "mode": "no-view"
-    },
-    {
-      "name": "github-search",
-      "title": "GitHub Search",
-      "subtitle": "Clipboard Searches",
-      "description": "Search selected text or clipboard text via Github.",
-      "mode": "no-view"
-    },
-    {
-      "name": "github-repo",
-      "title": "GitHub Repo",
-      "subtitle": "Clipboard Searches",
-      "description": "Search selected text or clipboard text via Github repo.",
-      "mode": "no-view"
-    },
-    {
-      "name": "deepl-trans",
-      "title": "Deepl Translation",
-      "subtitle": "Clipboard Searches",
-      "description": "Translate selected text or clipboard text via DeepL.",
-      "mode": "no-view"
     }
   ],
   "scripts": {
@@ -60,7 +35,10 @@
   "dependencies": {
     "@ai-sdk/openai": "^2.0.2",
     "@raycast/api": "^1.102.3",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/utils": "^1.17.0",
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.3.1",
+    "promptl-ai": "^0.7.5"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.0.4",
